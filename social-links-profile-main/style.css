@@ -1,0 +1,128 @@
+/* --reset-- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/* -- variables-- */
+:root {
+  /* --COLOR-- */
+  --light: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+  --Green: hsl(75, 94%, 57%);
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--Off-Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  line-height: 25px;
+}
+.content {
+  width: 23vw;
+  height: 85vh;
+  background-color: var(--Dark-Grey);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+.cont_header {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 20px 30px;
+  align-items: center;
+}
+.cont_header__img {
+  width: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 20px;
+}
+.cont_header__title {
+  font-size: 23px;
+  white-space: nowrap;
+}
+.cont_header__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Green);
+  white-space: nowrap;
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main__para {
+  font-size: 14px;
+  color: rgb(215, 212, 212);
+  white-space: nowrap;
+}
+.main__boxes {
+  width: 80%;
+  height: 340px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.main__box {
+  width: 100%;
+  height: 15%;
+  background-color: var(--Grey);
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  &:hover{
+    background-color: var(--Green);
+    color: black;
+    cursor:pointer;
+  }
+}
+@media (max-width: 700px) {
+  .content {
+    width: 80vw;
+    height: 100vh;
+    margin-top: 30vw;
+  }
+  .cont_header {
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+  }
+  .cont_header__img {
+    width: 125px;
+  }
+  .cont_header__title {
+    font-size: 35px;
+    padding-bottom: 3vw;
+  }
+  .cont_header__subtitle {
+    font-size: 20px;
+  }
+  .main__para {
+    font-size: 15px;
+  }
+}
